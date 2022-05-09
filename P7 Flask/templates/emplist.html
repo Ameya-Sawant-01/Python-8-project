@@ -1,0 +1,29 @@
+<div align="center">
+	<h1>WELCOME TO ALL USER</h1><br>
+
+<table border="1px" cellspacing="10" style="background-color: rgba(51, 51, 51, 0.32);">
+	<tr style="background-color:aqua">
+		<th>ID</th>
+		<th>Name</th>
+		<th>Contact</th>
+		<th>Email</th>
+		<th>Password</th>
+		<th colspan="2">Action</th>
+	</tr>
+	{% for tup in elist %}
+		<tr style="background-color:rgb(255, 255, 255)">
+			<td>{{tup[0]}}</td>
+			<td>{{tup[1]}}</td>
+			<td>{{tup[2]}}</td>
+			<td>{{tup[3]}}</td>
+			<td>{{tup[4]}}</td>
+			<td>
+				<a href="editEmp?id={{tup[0]}}">Edit</a>
+				<a href="deleteEmp?id={{tup[0]}}">Delete</a>
+			</td>
+		</tr>
+	{% endfor %}
+</table>
+
+<h3><a href="/home">Back</a></h3>
+</div>

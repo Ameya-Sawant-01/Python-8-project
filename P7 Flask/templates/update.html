@@ -1,0 +1,38 @@
+<div align="center">
+	<fieldset>
+		<h1>WELCOME TO UPDATE FORM</h1>
+		<form action="updateEmp" method="POST">
+			<table>
+				<tr>
+					<td>Id</td>
+					<td><input type="text" name="id" value="{{row[0]}}" required></td>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td><input type="text" name="name" value="{{row[1]}}" required></td>
+				</tr>
+				<tr>
+					<td>Contact</td>
+					<td><input type="text" name="contact" value="{{row[2]}}" required></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="text" name="email" value="{{row[3]}}" required></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td><input type="text" name="passw" value="{{row[4]}}" required></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="save"></td>
+					<td><input type="rest" value="Reset"></td>
+				</tr>
+
+
+			</table>
+		</form>
+		
+		<h3><a href="/home">Home</a></h3>
+		<h3><a href="/emplist">Back</a></h3>
+	</fieldset>
+</div> 

@@ -1,0 +1,125 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<style>  
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+body{  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: rgb(251, 234, 237);  
+}  
+.container {  
+    padding: 50px;  
+  background-color: rgb(214, 214, 214);  
+}  
+  
+input[type=text], input[type=password]{  
+  width: 25%;  
+  padding: 10px;  
+  margin: 5px 0 22px 0; 
+  margin-right:10px; 
+  display: inline-block;  
+  border: none;  
+  background: #f1f1f1;  
+}  
+input[type=text]:focus, input[type=password]:focus {  
+  background-color: orange;  
+  outline: none;  
+}  
+ div {  
+            padding: 10px 0;  
+         }  
+hr {  
+  border: 1px solid #f1f1f1;  
+  margin-bottom: 25px;  
+}  
+.registerbtn {  
+  background-color: #4CAF50;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 50%;  
+  opacity: 0.9;  
+}  
+.registerbtn:hover {  
+  opacity: 1;  
+}  
+</style>  
+</head>  
+<body>  
+<div class="topnav">
+  <a class="active" href="/">Home</a>
+  <a href='register'>Register</a>
+  <a href='login'>Login</a>
+</div>
+<form action="addUser" method="post">  
+  <div class="container">  
+   <center> <h1> {{error}} </h1></center>
+  <center>  <h1> Registration Form</h1> </center>  
+  <hr> 
+  <table>
+    <tr>
+      <label><b> Id </b></label><br>
+      <input type="text" name="id" placeholder= "Enter Id" size="15" required /><br> 
+    </tr>
+    <tr>
+      <label><b> Name </b></label><br>
+      <input type="text" name="name" placeholder= "Enter Name" size="15" required /><br>
+    </tr> 
+    <tr>
+      <label><b> Contact </b> </label><br>
+      <input type="text" name="contact" placeholder="Enter Mobile no." size="10"/ required><br>
+    </tr> 
+    <tr>
+      <label><b>Address</b></label><br>
+      <input type="text" name="address" placeholder="Enter Address" required></textarea><br>
+    </tr>
+    <tr>
+      <label for="email"><b>Email</b></label><br>
+      <input type="text" placeholder="Enter Email" name="email" required><br> 
+    </tr>
+    <tr>
+      <label for="psw"><b>Password</b></label><br>
+      <input type="password" placeholder="Enter Password" name="psw" required><br>
+    </tr> 
+    <tr>
+      <label for="psw-repeat"><b>Confirm Password</b></label><br>
+      <input type="password" placeholder="Enter Confirm Password" name="cnpsw" required><br><br>
+    </tr> 
+ 
+</table>
+  <center>
+  <input type="submit" class="registerbtn" value="Register">
+   <h3>If you have already account <a href='login'>Login</a><h3>
+  </center>
+  
+</form>  
+</body>  
+</html>  
